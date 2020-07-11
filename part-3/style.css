@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #ff385c;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-top: 2em;
+}
+
+header svg {
+    fill: var(--primary-color);
+}
+
+header .container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1em .8em;
+    border-radius: 2em;
+}
+
+header a.nav-item:hover {
+    background: #f7f7f7;
+}
+
+header nav {
+    display: flex;
+}
+
+#sign-up-button {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18) !important;
+    transition: box-shadow 0.2s;
+}
+
+#sign-up-button:hover {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+#dropdown-container {
+    position: relative;
+}
+
+#dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropdown-button > img {
+    margin-right: .3em;
+}
+
+#dropdown-menu {
+    position: absolute;
+    right: 0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18) !important;
+    min-width: 150px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    display: none;
+}
+
+#dropdown-menu a {
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+#dropdown-menu a img {
+    margin-right: .3em;
+}
+
+.search-container {
+    margin-top: 4em;
+}
+
+.search-buttons button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: .5em;
+    outline: none;
+}
+
+.search-buttons button:hover {
+    color: #717171 !important;
+}
+
+.search-buttons button span {
+    background: #444;
+    color: white;
+    padding: .2em .5em;
+    font-size: .8em;
+    border-radius: .3em;
+}
+
+.search-container {
+    position: relative;
+}
+
+.menu-indicator {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-bottom: 2px solid #444;
+    width: 95px;
+    transition: all .3s;
+}
+
+.search-buttons button:nth-child(1).active ~ .menu-indicator {
+    left: 0;
+    width: 95px;
+}
+
+.search-buttons button:nth-child(2).active ~ .menu-indicator {
+    left: 104px;
+    width: 99px;
+}
+
+.search-buttons button:nth-child(3).active ~ .menu-indicator {
+    left: 211px;
+    width: 88px;
+}
+
+.search-buttons button:nth-child(4).active ~ .menu-indicator {
+    left: 309px;
+    width: 178px;
+}
